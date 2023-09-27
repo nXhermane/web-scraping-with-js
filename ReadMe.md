@@ -15,12 +15,12 @@ There's no need for complex installation steps for this project. You can simply 
 
 1. Clone this repository to your local machine using the following command:
 ```bash
-git clone https://github.com/nXhermane/web-scrapping-with-js.git
+git clone https://github.com/nXhermane/web-scraping-with-js.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd web-scrapping-with-js
+cd web-scraping-with-js
 ```
 ## Usage
 1. Run the script using Node.js:
@@ -31,7 +31,7 @@ npm start
 2. The extracted data will be saved in a file named src/kotlin.json.
 
 ## Contribution
-Your feedback is valuable. If you encounter any issues or have suggestions for improvements, please don't hesitate to  [open an issue](https://github.com/nXhermane/web-scrapping-with-js/issues) on this repository.
+Your feedback is valuable. If you encounter any issues or have suggestions for improvements, please don't hesitate to  [open an issue](https://github.com/nXhermane/web-scraping-with-js/issues) on this repository.
 
 ## License
 This project is licensed under the MIT License. For more information, see the [LICENSE](LICENSE) file.
