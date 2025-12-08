@@ -1,4 +1,11 @@
-import cheerio from "cheerio";
+// NOTE: This script relies on the specific HTML structure of the Kotlin API documentation page
+// at https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/. The CSS selectors used for scraping
+// (e.g., "article.page-content h3", "div.api-declarations-list", etc.) are based on the current
+// page layout as of the last update. If the extraction returns 0 categories or empty results,
+// it may indicate that the page structure has changed, and the selectors need to be updated
+// to match the new HTML structure.
+
+import * as cheerio from "cheerio";
 import fetch from "node-fetch";
 import fs from "fs";
 
@@ -194,12 +201,12 @@ class DataScraper {
     return { descriptionArray, codeArray };
   }
 }
-
+// 
 (async () => {
   const scraper = new DataScraper(BASE_URL);
   await scraper.runExtraction(BASE_URL);
   fs.writeFileSync("kotlin.json", JSON.stringify(scraper.extractedData));
-  // const sub = new LevelOneSubcategory()
-  // await sub.runExtraction(BASE_URL)
-  // console.log(sub.subcategories)
+  const sub = new LevelOneSubcategory()
+  await sub.runExtraction(BASE_URL)
+  console.log(sub.subcategories)
 })();
